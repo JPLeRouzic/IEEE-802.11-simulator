@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JE802>
+
+	<!--mesh -->
+	<JE802Control showGui="true" EmulationDuration_ms="10000"
+		resume="false" resumeFile="results\hibernation.zip">
+		<JE802StatEval seed="1" EvalThrpPerAC="true"
+			EvalDelayPerAC="true" EvalOfferPerAC="true" EvaluationStarttime_ms="0"
+			EvaluationInterval_ms="100" Path2Results="results"
+			EvalTotalOffer="true" EvalTotalThrp="true" EvalTotalDelay="true"
+			HistogramMax_ms="100" HistogramNumOfBins="2000">
+			<!--JE802StatEval defines the parameters needed for statistical analysis 
+				and evaluation (for example when measuring the overall throughputs etc.) -->
+		</JE802StatEval>
+
+		<JE802Animation attenuationFactor="3.5" baseLatitude="47.37655200000001"
+			baseLongitude="8.548604999999982" generateGEarth="true" maxDelay="5"
+			maxThrp="3" maxTxdBm="20" mbPerBlock="0.2" minTxdBm="-60"
+			overlayAccuracy="2" generateOfferBlocks="true" generatePowerOverlay="true" />
+
+
+	</JE802Control>
+
+	<JE802RoutingParameters routingEnabled="false"
+		channelSwitchingEnabled="false" multiChannelPathMetricEnabled="false"
+		activeRouteTimeout_ms="3000" ipHeaderByte="20" brokenLinkAfterLoss="10"
+		helloInterval_ms="5000" channelSwitchingDelay_ms="1" />
+
+
+	<JE802Station address="1">
+		<JE802Mobility isMobile="false" xLocation="0" yLocation="0"
+			zLocation="0" oldFormat="true" />
+
+		<JE802TCP b="1" bufferSizePackets="10" minimumTimeoutMs="50"
+			slowStartThreshold="10" />
+
+		<JE802SME>
+			<!--not much defined so far -->
+		</JE802SME>
+		<JE80211MAC dot11MacAddress4_byte="6" dot11MacFCS_byte="4"
+			dot11MacHeaderACK_byte="10" dot11MacHeaderCTS_byte="10"
+			dot11MacHeaderDATA_byte="24" dot11MacHeaderRTS_byte="16"
+			dot11WepEncryption="false">
+
+			<JE802Mlme NameOfAlgorithm="phymode_54Mbps"
+				ComputingInterval_ms="100" ShowPlot="false">
+				<!-- // MLME = MAC Layer Management Entity -->
+				<!-- // "NameOfAlgorithm" determines the actual algorithm used for dynamically 
+					adapting the MAC parameters. This string value will be compared to the list 
+					of existing algorithms by the mobile computing entity. Use "none" for static 
+					behavior. -->
+				<!-- // "ComputingInterval_ms" will set the period, i.e., the time interval 
+					between each computing event, given in milliseconds -->
+				<!-- // "ShowPlot" set to true will switch on a small plot showing the 
+					parameters used. For example the value of the parameter AIFSN can be seen -->
+			</JE802Mlme>
+
+			<JE802BackoffEntity AC="1" queuesize="10">
+				<MIB802.11e dot11EDCAAIFSN="2" dot11EDCACWmax="1023"
+					dot11EDCACWmin="15" dot11EDCAMSDULifetime="1000" dot11EDCAPF="2.0"
+					dot11EDCATXOPLimit="3008" />
+			</JE802BackoffEntity>
+			<JE802BackoffEntity AC="2" queuesize="10">
+				<MIB802.11e dot11EDCAAIFSN="4" dot11EDCACWmax="1023"
+					dot11EDCACWmin="15" dot11EDCAMSDULifetime="1000" dot11EDCAPF="2.0"
+					dot11EDCATXOPLimit="3008" />
+			</JE802BackoffEntity>
+			<JE802BackoffEntity AC="3" queuesize="10">
+				<MIB802.11e dot11EDCAAIFSN="2" dot11EDCACWmax="1023"
+					dot11EDCACWmin="15" dot11EDCAMSDULifetime="1000" dot11EDCAPF="2.0"
+					dot11EDCATXOPLimit="3008" />
+			</JE802BackoffEntity>
+			<JE802BackoffEntity AC="4" queuesize="10">
+				<MIB802.11e dot11EDCAAIFSN="2" dot11EDCACWmax="1023"
+					dot11EDCACWmin="15" dot11EDCAMSDULifetime="1000" dot11EDCAPF="2.0"
+					dot11EDCATXOPLimit="3008" />
+			</JE802BackoffEntity>
+
+			<MIB802.11-1999 dot11BroadcastAddress="255"
+				dot11FragmentationThreshold="512" dot11LongRetryLimit="4"
+				dot11MACAddress="1" dot11MaxReceiveLifetime="1000"
+				dot11MaxTransmitMSDULifetime="1000" dot11RTSThreshold="500"
+				dot11ShortRetryLimit="7" />
+
+
+			<JE80211PHY PLCPHeaderWithoutServiceField_ms="0.004"
+				PLCPPreamble_ms="0.016" PLCPServiceField_bit="16" PLCPTail_bit="6"
+				SymbolDuration_ms="0.004">
+				<MIB802.11abgn SIFS="0.016" aSlotTime="0.009"
+					dot11CurrentChannelNumberRX="6" dot11CurrentChannelNumberTX="6"
+					dot11CurrentTransmitPowerLevel_dBm="20" />
+				<JEAntenna xDirection="0" yDirection="-5" zDirection="1.6"
+					angle_degrees="30" gain_dBi="50" />
+</JE80211PHY>
+
+		</JE80211MAC>
+
+	</JE802Station>
+
+	<JE802Station address="2">
+		<JE802TrafficGen AC="1" DA="1" EvalDelay="true"
+			EvalThrp="true" EvalThrpOffer="true" HistogramMax_ms="60"
+			HistogramNumOfBins="600" isTcpTraffic="false" max_packet_size_byte="200"
+			mean_load_Mbps="0.9" port="47768196" starttime_ms="0" stoptime_ms="0"
+			type="data" />
+		<JE802TrafficGen AC="2" DA="1" EvalDelay="true"
+			EvalThrp="true" EvalThrpOffer="true" HistogramMax_ms="60"
+			HistogramNumOfBins="600" isTcpTraffic="false" max_packet_size_byte="2000"
+			mean_load_Mbps="0.9" port="47768196" starttime_ms="0" stoptime_ms="0"
+			type="data" />
+		<JE802TCP b="1" bufferSizePackets="10" minimumTimeoutMs="50"
+			slowStartThreshold="10" />
+		<JE802Mobility isMobile="false" xLocation="5" yLocation="5"
+			zLocation="0" oldFormat="true" />
+		<JE802SME>
+			<!--not much defined so far -->
+		</JE802SME>
+		<JE80211MAC dot11MacAddress4_byte="6" dot11MacFCS_byte="4"
+			dot11MacHeaderACK_byte="10" dot11MacHeaderCTS_byte="10"
+			dot11MacHeaderDATA_byte="24" dot11MacHeaderRTS_byte="16"
+			dot11WepEncryption="false">
+
+			<JE802Mlme NameOfAlgorithm="phymode_54Mbps"
+				ComputingInterval_ms="100" ShowPlot="false">
+				<!-- // MLME = MAC Layer Management Entity -->
+				<!-- // "NameOfAlgorithm" determines the actual algorithm used for dynamically 
+					adapting the MAC parameters. This string value will be compared to the list 
+					of existing algorithms by the mobile computing entity. Use "none" for static 
+					behavior. -->
+				<!-- // "ComputingInterval_ms" will set the period, i.e., the time interval 
+					between each computing event, given in milliseconds -->
+				<!-- // "ShowPlot" set to true will switch on a small plot showing the 
+					parameters used. For example the value of the parameter AIFSN can be seen -->
+			</JE802Mlme>
+
+
+			<JE802BackoffEntity AC="1" queuesize="10">
+				<MIB802.11e dot11EDCAAIFSN="2" dot11EDCACWmax="1023"
+					dot11EDCACWmin="15" dot11EDCAMSDULifetime="1000" dot11EDCAPF="2.0"
+					dot11EDCATXOPLimit="3008" />
+			</JE802BackoffEntity>
+			<JE802BackoffEntity AC="2" queuesize="10">
+				<MIB802.11e dot11EDCAAIFSN="4" dot11EDCACWmax="1023"
+					dot11EDCACWmin="15" dot11EDCAMSDULifetime="1000" dot11EDCAPF="2.0"
+					dot11EDCATXOPLimit="3008" />
+			</JE802BackoffEntity>
+			<JE802BackoffEntity AC="3" queuesize="10">
+				<MIB802.11e dot11EDCAAIFSN="2" dot11EDCACWmax="1023"
+					dot11EDCACWmin="15" dot11EDCAMSDULifetime="1000" dot11EDCAPF="2.0"
+					dot11EDCATXOPLimit="3008" />
+			</JE802BackoffEntity>
+			<JE802BackoffEntity AC="4" queuesize="10">
+				<MIB802.11e dot11EDCAAIFSN="2" dot11EDCACWmax="1023"
+					dot11EDCACWmin="15" dot11EDCAMSDULifetime="1000" dot11EDCAPF="2.0"
+					dot11EDCATXOPLimit="3008" />
+			</JE802BackoffEntity>
+			<MIB802.11-1999 dot11BroadcastAddress="255"
+				dot11FragmentationThreshold="512" dot11LongRetryLimit="4"
+				dot11MACAddress="2" dot11MaxReceiveLifetime="1000"
+				dot11MaxTransmitMSDULifetime="1000" dot11RTSThreshold="500"
+				dot11ShortRetryLimit="7" />
+
+			<JE80211PHY PLCPHeaderWithoutServiceField_ms="0.004"
+				PLCPPreamble_ms="0.016" PLCPServiceField_bit="16" PLCPTail_bit="6"
+				SymbolDuration_ms="0.004">
+				<MIB802.11abgn SIFS="0.016" aSlotTime="0.009"
+					dot11CurrentChannelNumberRX="6" dot11CurrentChannelNumberTX="6"
+					dot11CurrentTransmitPowerLevel_dBm="20" />
+				<JEAntenna xDirection="0" yDirection="-5" zDirection="1.6"
+					angle_degrees="30" gain_dBi="50" />
+			</JE80211PHY>
+		</JE80211MAC>
+
+
+	</JE802Station>
+
+	<JE802Station address="3">
+		<JE802TrafficGen AC="1" DA="1" EvalDelay="true"
+			EvalThrp="true" EvalThrpOffer="true" HistogramMax_ms="60"
+			HistogramNumOfBins="600" isTcpTraffic="false" max_packet_size_byte="200"
+			mean_load_Mbps="0.9" port="47768196" starttime_ms="0" stoptime_ms="0"
+			type="data" />
+		<JE802TrafficGen AC="2" DA="1" EvalDelay="true"
+			EvalThrp="true" EvalThrpOffer="true" HistogramMax_ms="60"
+			HistogramNumOfBins="600" isTcpTraffic="false" max_packet_size_byte="2000"
+			mean_load_Mbps="0.9" port="47768196" starttime_ms="0" stoptime_ms="0"
+			type="data" />
+		<JE802TCP b="1" bufferSizePackets="10" minimumTimeoutMs="50"
+			slowStartThreshold="10" />
+		<JE802Mobility isMobile="false" xLocation="0" yLocation="5"
+			zLocation="0" oldFormat="true" />
+		<JE802SME>
+			<!--not much defined so far -->
+		</JE802SME>
+		<JE80211MAC dot11MacAddress4_byte="6" dot11MacFCS_byte="4"
+			dot11MacHeaderACK_byte="10" dot11MacHeaderCTS_byte="10"
+			dot11MacHeaderDATA_byte="24" dot11MacHeaderRTS_byte="16"
+			dot11WepEncryption="false">
+
+			<JE802Mlme NameOfAlgorithm="phymode_54Mbps"
+				ComputingInterval_ms="100" ShowPlot="false">
+				<!-- // MLME = MAC Layer Management Entity -->
+				<!-- // "NameOfAlgorithm" determines the actual algorithm used for dynamically 
+					adapting the MAC parameters. This string value will be compared to the list 
+					of existing algorithms by the mobile computing entity. Use "none" for static 
+					behavior. -->
+				<!-- // "ComputingInterval_ms" will set the period, i.e., the time interval 
+					between each computing event, given in milliseconds -->
+				<!-- // "ShowPlot" set to true will switch on a small plot showing the 
+					parameters used. For example the value of the parameter AIFSN can be seen -->
+			</JE802Mlme>
+
+
+			<JE802BackoffEntity AC="1" queuesize="10">
+				<MIB802.11e dot11EDCAAIFSN="2" dot11EDCACWmax="1023"
+					dot11EDCACWmin="15" dot11EDCAMSDULifetime="1000" dot11EDCAPF="2.0"
+					dot11EDCATXOPLimit="3008" />
+			</JE802BackoffEntity>
+			<JE802BackoffEntity AC="2" queuesize="10">
+				<MIB802.11e dot11EDCAAIFSN="4" dot11EDCACWmax="1023"
+					dot11EDCACWmin="15" dot11EDCAMSDULifetime="1000" dot11EDCAPF="2.0"
+					dot11EDCATXOPLimit="3008" />
+			</JE802BackoffEntity>
+			<JE802BackoffEntity AC="3" queuesize="10">
+				<MIB802.11e dot11EDCAAIFSN="2" dot11EDCACWmax="1023"
+					dot11EDCACWmin="15" dot11EDCAMSDULifetime="1000" dot11EDCAPF="2.0"
+					dot11EDCATXOPLimit="3008" />
+			</JE802BackoffEntity>
+			<JE802BackoffEntity AC="4" queuesize="10">
+				<MIB802.11e dot11EDCAAIFSN="2" dot11EDCACWmax="1023"
+					dot11EDCACWmin="15" dot11EDCAMSDULifetime="1000" dot11EDCAPF="2.0"
+					dot11EDCATXOPLimit="3008" />
+			</JE802BackoffEntity>
+			<MIB802.11-1999 dot11BroadcastAddress="255"
+				dot11FragmentationThreshold="512" dot11LongRetryLimit="4"
+				dot11MACAddress="3" dot11MaxReceiveLifetime="1000"
+				dot11MaxTransmitMSDULifetime="1000" dot11RTSThreshold="500"
+				dot11ShortRetryLimit="7" />
+
+			<JE80211PHY PLCPHeaderWithoutServiceField_ms="0.004"
+				PLCPPreamble_ms="0.016" PLCPServiceField_bit="16" PLCPTail_bit="6"
+				SymbolDuration_ms="0.004">
+				<MIB802.11abgn SIFS="0.016" aSlotTime="0.009"
+					dot11CurrentChannelNumberRX="6" dot11CurrentChannelNumberTX="6"
+					dot11CurrentTransmitPowerLevel_dBm="20" />
+				<JEAntenna xDirection="0" yDirection="-5" zDirection="1.6"
+					angle_degrees="30" gain_dBi="50" />
+
+			</JE80211PHY>
+		</JE80211MAC>
+
+
+	</JE802Station>
+	<JE802Station address="4">
+		<JE802TrafficGen AC="1" DA="1" EvalDelay="true"
+			EvalThrp="true" EvalThrpOffer="true" HistogramMax_ms="60"
+			HistogramNumOfBins="600" isTcpTraffic="false" max_packet_size_byte="200"
+			mean_load_Mbps="0.9" port="47768196" starttime_ms="0" stoptime_ms="0"
+			type="data" />
+		<JE802TrafficGen AC="2" DA="1" EvalDelay="true"
+			EvalThrp="true" EvalThrpOffer="true" HistogramMax_ms="60"
+			HistogramNumOfBins="600" isTcpTraffic="false" max_packet_size_byte="2000"
+			mean_load_Mbps="0.9" port="47768196" starttime_ms="0" stoptime_ms="0"
+			type="data" />
+		<JE802TCP b="1" bufferSizePackets="10" minimumTimeoutMs="50"
+			slowStartThreshold="10" />
+		<JE802Mobility isMobile="false" xLocation="5" yLocation="0"
+			zLocation="0" oldFormat="true" />
+		<JE802SME>
+			<!--not much defined so far -->
+		</JE802SME>
+		<JE80211MAC dot11MacAddress4_byte="6" dot11MacFCS_byte="4"
+			dot11MacHeaderACK_byte="10" dot11MacHeaderCTS_byte="10"
+			dot11MacHeaderDATA_byte="24" dot11MacHeaderRTS_byte="16"
+			dot11WepEncryption="false">
+
+			<JE802Mlme NameOfAlgorithm="phymode_54Mbps"
+				ComputingInterval_ms="100" ShowPlot="false">
+				<!-- // MLME = MAC Layer Management Entity -->
+				<!-- // "NameOfAlgorithm" determines the actual algorithm used for dynamically 
+					adapting the MAC parameters. This string value will be compared to the list 
+					of existing algorithms by the mobile computing entity. Use "none" for static 
+					behavior. -->
+				<!-- // "ComputingInterval_ms" will set the period, i.e., the time interval 
+					between each computing event, given in milliseconds -->
+				<!-- // "ShowPlot" set to true will switch on a small plot showing the 
+					parameters used. For example the value of the parameter AIFSN can be seen -->
+			</JE802Mlme>
+
+
+			<JE802BackoffEntity AC="1" queuesize="10">
+				<MIB802.11e dot11EDCAAIFSN="2" dot11EDCACWmax="1023"
+					dot11EDCACWmin="15" dot11EDCAMSDULifetime="1000" dot11EDCAPF="2.0"
+					dot11EDCATXOPLimit="3008" />
+			</JE802BackoffEntity>
+			<JE802BackoffEntity AC="2" queuesize="10">
+				<MIB802.11e dot11EDCAAIFSN="4" dot11EDCACWmax="1023"
+					dot11EDCACWmin="15" dot11EDCAMSDULifetime="1000" dot11EDCAPF="2.0"
+					dot11EDCATXOPLimit="3008" />
+			</JE802BackoffEntity>
+			<JE802BackoffEntity AC="3" queuesize="10">
+				<MIB802.11e dot11EDCAAIFSN="2" dot11EDCACWmax="1023"
+					dot11EDCACWmin="15" dot11EDCAMSDULifetime="1000" dot11EDCAPF="2.0"
+					dot11EDCATXOPLimit="3008" />
+			</JE802BackoffEntity>
+			<JE802BackoffEntity AC="4" queuesize="10">
+				<MIB802.11e dot11EDCAAIFSN="2" dot11EDCACWmax="1023"
+					dot11EDCACWmin="15" dot11EDCAMSDULifetime="1000" dot11EDCAPF="2.0"
+					dot11EDCATXOPLimit="3008" />
+			</JE802BackoffEntity>
+			<MIB802.11-1999 dot11BroadcastAddress="255"
+				dot11FragmentationThreshold="512" dot11LongRetryLimit="4"
+				dot11MACAddress="4" dot11MaxReceiveLifetime="1000"
+				dot11MaxTransmitMSDULifetime="1000" dot11RTSThreshold="500"
+				dot11ShortRetryLimit="7" />
+
+			<JE80211PHY PLCPHeaderWithoutServiceField_ms="0.004"
+				PLCPPreamble_ms="0.016" PLCPServiceField_bit="16" PLCPTail_bit="6"
+				SymbolDuration_ms="0.004">
+				<MIB802.11abgn SIFS="0.016" aSlotTime="0.009"
+					dot11CurrentChannelNumberRX="6" dot11CurrentChannelNumberTX="6"
+					dot11CurrentTransmitPowerLevel_dBm="20" />
+				<JEAntenna xDirection="0" yDirection="-5" zDirection="1.6"
+					angle_degrees="30" gain_dBi="50" />
+
+			</JE80211PHY>
+		</JE80211MAC>
+
+
+	</JE802Station>
+	<JEWirelessChannels theReuseDistance_m="200"
+		useInterference="false" orthogonalChannelDistance="1"
+		channelBusyThreshold_dBm="-82" noiseLevel_dBm="-95">
+		<aChannel aChannelNumber="1" dot11FreqBandWidth_MHz="22.0"
+			dot11CenterFreq_MHz="2412" dot11MaximumTransmitPowerLevel_dBm="20.0" />
+		<aChannel aChannelNumber="6" dot11FreqBandWidth_MHz="22.0"
+			dot11CenterFreq_MHz="2437" dot11MaximumTransmitPowerLevel_dBm="20.0" />
+		<aChannel aChannelNumber="11" dot11FreqBandWidth_MHz="22.0"
+			dot11CenterFreq_MHz="2462" dot11MaximumTransmitPowerLevel_dBm="20.0" />
+	</JEWirelessChannels>
+	<JE802PhyModes>
+		<aPhyMode Mbps="06" Name="MCS0" basic="true"  bit_per_symbol="24" id="1" />
+		<aPhyMode Mbps="09" Name="MCS1" basic="false" bit_per_symbol="36" id="2" />
+		<aPhyMode Mbps="12" Name="MCS2" basic="true"  bit_per_symbol="48" id="3" />
+		<aPhyMode Mbps="18" Name="MCS3" basic="false" bit_per_symbol="72" id="4" />
+		<aPhyMode Mbps="24" Name="MCS4" basic="true"  bit_per_symbol="96" id="5" />
+		<aPhyMode Mbps="36" Name="MCS5" basic="false" bit_per_symbol="144" id="6" />
+		<aPhyMode Mbps="48" Name="MCS6" basic="false" bit_per_symbol="192" id="7" />
+		<aPhyMode Mbps="54" Name="MCS7" basic="false" bit_per_symbol="216" id="8" />
+		<aPhyMode Mbps="65" Name="MCS8" basic="false" bit_per_symbol="192" id="7" />
+		<aPhyMode Mbps="78" Name="MCS9" basic="false" bit_per_symbol="216" id="8" />
+	</JE802PhyModes>
+</JE802>

@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<scenario>
+    <seed>1387294642784</seed>
+    <duration>3</duration>
+    <values>100</values>
+    <Dist_STAs>6</Dist_STAs>
+    <Roof>15</Roof>
+    <Ceiling>3</Ceiling>
+    <Ambient_Noise>-90</Ambient_Noise>
+    <Nb_APs>1</Nb_APs>
+    <Nb_STAs>10</Nb_STAs>
+    <channel_width>2</channel_width>
+    <SpatialStreams>1</SpatialStreams>
+    <PremiseModel>1</PremiseModel>
+    <MCS>7</MCS>
+    <ProPag>900</ProPag>
+    <node number="1">
+        <rate>144400000</rate>
+        <coverage>17</coverage>
+        <isAP>false</isAP>
+        <xPosition>0</xPosition>
+        <yPosition>0</yPosition>
+        <zPosition>0</zPosition>
+        <AC>0</AC>
+        <source id="1" type="generic">
+            <pktLngth>8000</pktLngth>
+            <pktDist>c</pktDist>
+            <intArrTime>1000000</intArrTime>
+            <intArrDstr>c</intArrDstr>
+        </source>
+    </node>
+    <node number="2">
+        <rate>144400000</rate>
+        <coverage>17</coverage>
+        <isAP>false</isAP>
+        <xPosition>0</xPosition>
+        <yPosition>6</yPosition>
+        <zPosition>0</zPosition>
+        <AC>0</AC>
+        <source id="1" type="generic">
+            <pktLngth>8000</pktLngth>
+            <pktDist>c</pktDist>
+            <intArrTime>1000000</intArrTime>
+            <intArrDstr>c</intArrDstr>
+        </source>
+    </node>
+    <node number="3">
+        <rate>144400000</rate>
+        <coverage>17</coverage>
+        <isAP>false</isAP>
+        <xPosition>0</xPosition>
+        <yPosition>12</yPosition>
+        <zPosition>0</zPosition>
+        <AC>0</AC>
+        <source id="1" type="generic">
+            <pktLngth>8000</pktLngth>
+            <pktDist>c</pktDist>
+            <intArrTime>1000000</intArrTime>
+            <intArrDstr>c</intArrDstr>
+        </source>
+    </node>
+    <node number="4">
+        <rate>144400000</rate>
+        <coverage>17</coverage>
+        <isAP>false</isAP>
+        <xPosition>0</xPosition>
+        <yPosition>18</yPosition>
+        <zPosition>0</zPosition>
+        <AC>0</AC>
+        <source id="1" type="generic">
+            <pktLngth>8000</pktLngth>
+            <pktDist>c</pktDist>
+            <intArrTime>1000000</intArrTime>
+            <intArrDstr>c</intArrDstr>
+        </source>
+    </node>
+    <node number="5">
+        <rate>144400000</rate>
+        <coverage>17</coverage>
+        <isAP>false</isAP>
+        <xPosition>6</xPosition>
+        <yPosition>0</yPosition>
+        <zPosition>0</zPosition>
+        <AC>0</AC>
+        <source id="1" type="generic">
+            <pktLngth>8000</pktLngth>
+            <pktDist>c</pktDist>
+            <intArrTime>1000000</intArrTime>
+            <intArrDstr>c</intArrDstr>
+        </source>
+    </node>
+    <node number="6">
+        <rate>144400000</rate>
+        <coverage>17</coverage>
+        <isAP>false</isAP>
+        <xPosition>6</xPosition>
+        <yPosition>6</yPosition>
+        <zPosition>0</zPosition>
+        <AC>0</AC>
+        <source id="1" type="generic">
+            <pktLngth>8000</pktLngth>
+            <pktDist>c</pktDist>
+            <intArrTime>1000000</intArrTime>
+            <intArrDstr>c</intArrDstr>
+        </source>
+    </node>
+    <node number="7">
+        <rate>144400000</rate>
+        <coverage>17</coverage>
+        <isAP>false</isAP>
+        <xPosition>6</xPosition>
+        <yPosition>12</yPosition>
+        <zPosition>0</zPosition>
+        <AC>0</AC>
+        <source id="1" type="generic">
+            <pktLngth>8000</pktLngth>
+            <pktDist>c</pktDist>
+            <intArrTime>1000000</intArrTime>
+            <intArrDstr>c</intArrDstr>
+        </source>
+    </node>
+    <node number="8">
+        <rate>144400000</rate>
+        <coverage>17</coverage>
+        <isAP>true</isAP>
+        <xPosition>6</xPosition>
+        <yPosition>18</yPosition>
+        <zPosition>0</zPosition>
+        <AC>0</AC>
+        <source id="1" type="generic">
+            <pktLngth>8000</pktLngth>
+            <pktDist>c</pktDist>
+            <intArrTime>1000000</intArrTime>
+            <intArrDstr>c</intArrDstr>
+        </source>
+    </node>
+    <node number="9">
+        <rate>144400000</rate>
+        <coverage>17</coverage>
+        <isAP>false</isAP>
+        <xPosition>12</xPosition>
+        <yPosition>0</yPosition>
+        <zPosition>0</zPosition>
+        <AC>0</AC>
+        <source id="1" type="generic">
+            <pktLngth>8000</pktLngth>
+            <pktDist>c</pktDist>
+            <intArrTime>1000000</intArrTime>
+            <intArrDstr>c</intArrDstr>
+        </source>
+    </node>
+    <node number="10">
+        <rate>144400000</rate>
+        <coverage>17</coverage>
+        <isAP>false</isAP>
+        <xPosition>12</xPosition>
+        <yPosition>6</yPosition>
+        <zPosition>0</zPosition>
+        <AC>0</AC>
+        <source id="1" type="generic">
+            <pktLngth>8000</pktLngth>
+            <pktDist>c</pktDist>
+            <intArrTime>1000000</intArrTime>
+            <intArrDstr>c</intArrDstr>
+        </source>
+    </node>
+    <nodes>10</nodes>
+    <mixNodes>1</mixNodes>
+    <phyLayer>2</phyLayer>
+    <RTSThr>999999</RTSThr>
+    <ctsToSelf>n</ctsToSelf>
+    <EDCA>
+        <cwMinFact0>1</cwMinFact0>
+        <cwMinFact1>2</cwMinFact1>
+        <cwMinFact2>4</cwMinFact2>
+        <cwMinFact3>8</cwMinFact3>
+        <cwMaxFact0>1</cwMaxFact0>
+        <cwMaxFact1>4</cwMaxFact1>
+        <cwMaxFact2>8</cwMaxFact2>
+        <cwMaxFact3>16</cwMaxFact3>
+        <aifs0>2</aifs0>
+        <aifs1>2</aifs1>
+        <aifs2>1</aifs2>
+        <aifs3>1</aifs3>
+    </EDCA>
+    <resultsPath>C:\Default\JPLR\tmp\Hew_Sim_11ac_10_wo_hidden\.</resultsPath>
+    <outResults>_</outResults>
+</scenario>
+
+**************************************************************************************************
+
+<?xml version="1.0"?>
+<!DOCTYPE ScenarioConfiguration>
+<!--CONFIGURATION FILE FOR THE STANDARD'S MAC AND PHYSICAL LAYER PARAMETERS-->
+<SPEC_PARAMS>
+	<SLOT_ERP>0.000009</SLOT_ERP>
+	<SLOT_NON_ERP>0.000020</SLOT_NON_ERP>
+	<SIFS>0.000010</SIFS>
+	<DIFS_ERP>0.000019</DIFS_ERP>
+	<DIFS_NON_ERP>0.000030</DIFS_NON_ERP>
+	<SIFS_A>0.000016</SIFS_A>
+	<SIFS_G>0.000030</SIFS_G>
+	<LONG_PHY>0.000192</LONG_PHY>
+	<SHORT_PHY>0.000096</SHORT_PHY>
+	<OFDM_PHY>0.000020</OFDM_PHY>
+	<CW_MIN_DSSS>32</CW_MIN_DSSS>
+	<CW_MIN_OFDM>16</CW_MIN_OFDM>
+	<CW_MAX>1024</CW_MAX>
+	<ACK>112</ACK>
+	<RTS>160</RTS>
+	<CTS>112</CTS>
+	<MAC>272</MAC>
+	<MAX_PKT>32768</MAX_PKT>
+	<MAX_PKT_QUEUE_LNGTH>10000</MAX_PKT_QUEUE_LNGTH>
+</SPEC_PARAMS>
+
+************************************************************************************************
+
+<?xml version="1.0" encoding="UTF-8"?>
+<JE802>
+
+	<!--mesh -->
+	<JE802Control showGui="true" EmulationDuration_ms="10000"
+		resume="false" resumeFile="results\hibernation.zip">
+		<JE802StatEval seed="1" EvalThrpPerAC="true"
+			EvalDelayPerAC="true" EvalOfferPerAC="true" EvaluationStarttime_ms="0"
+			EvaluationInterval_ms="100" Path2Results="results"
+			EvalTotalOffer="true" EvalTotalThrp="true" EvalTotalDelay="true"
+			HistogramMax_ms="100" HistogramNumOfBins="2000">
+			<!--JE802StatEval defines the parameters needed for statistical analysis 
+				and evaluation (for example when measuring the overall throughputs etc.) -->
+		</JE802StatEval>
+
+		<JE802Animation attenuationFactor="3.5" baseLatitude="47.37655200000001"
+			baseLongitude="8.548604999999982" generateGEarth="true" maxDelay="5"
+			maxThrp="3" maxTxdBm="20" mbPerBlock="0.2" minTxdBm="-60"
+			overlayAccuracy="2" generateOfferBlocks="true" generatePowerOverlay="true" />
+
+
+	</JE802Control>
+
+	<JE802RoutingParameters routingEnabled="false"
+		channelSwitchingEnabled="false" multiChannelPathMetricEnabled="false"
+		activeRouteTimeout_ms="3000" ipHeaderByte="20" brokenLinkAfterLoss="10"
+		helloInterval_ms="5000" channelSwitchingDelay_ms="1" />
+
+
+	<JE802Station address="1">
+		<JE802Mobility isMobile="false" xLocation="0" yLocation="0"
+			zLocation="0" oldFormat="true" />
+
+		<JE802TCP b="1" bufferSizePackets="10" minimumTimeoutMs="50"
+			slowStartThreshold="10" />
+
+		<JE802SME>
+			<!--not much defined so far -->
+		</JE802SME>
+
+		<JE80211MAC dot11MacAddress4_byte="6" dot11MacFCS_byte="4"
+			dot11MacHeaderACK_byte="10" dot11MacHeaderCTS_byte="10"
+			dot11MacHeaderDATA_byte="24" dot11MacHeaderRTS_byte="16"
+			dot11WepEncryption="false">
+
+			<JE802Mlme NameOfAlgorithm="phymode_54Mbps"
+				ComputingInterval_ms="100" ShowPlot="false">
+			</JE802Mlme>
+
+			<JE802BackoffEntity AC="1" queuesize="10">
+				<MIB802.11e dot11EDCAAIFSN="2" dot11EDCACWmax="1023"
+					dot11EDCACWmin="15" dot11EDCAMSDULifetime="1000" dot11EDCAPF="2.0"
+					dot11EDCATXOPLimit="3008" />
+			</JE802BackoffEntity>
+			<JE802BackoffEntity AC="2" queuesize="10">
+				<MIB802.11e dot11EDCAAIFSN="4" dot11EDCACWmax="1023"
+					dot11EDCACWmin="15" dot11EDCAMSDULifetime="1000" dot11EDCAPF="2.0"
+					dot11EDCATXOPLimit="3008" />
+			</JE802BackoffEntity>
+			<JE802BackoffEntity AC="3" queuesize="10">
+				<MIB802.11e dot11EDCAAIFSN="2" dot11EDCACWmax="1023"
+					dot11EDCACWmin="15" dot11EDCAMSDULifetime="1000" dot11EDCAPF="2.0"
+					dot11EDCATXOPLimit="3008" />
+			</JE802BackoffEntity>
+			<JE802BackoffEntity AC="4" queuesize="10">
+				<MIB802.11e dot11EDCAAIFSN="2" dot11EDCACWmax="1023"
+					dot11EDCACWmin="15" dot11EDCAMSDULifetime="1000" dot11EDCAPF="2.0"
+					dot11EDCATXOPLimit="3008" />
+			</JE802BackoffEntity>
+
+			<MIB802.11-1999 dot11BroadcastAddress="255"
+				dot11FragmentationThreshold="512" dot11LongRetryLimit="4"
+				dot11MACAddress="1" dot11MaxReceiveLifetime="1000"
+				dot11MaxTransmitMSDULifetime="1000" dot11RTSThreshold="500"
+				dot11ShortRetryLimit="7" />
+
+
+			<JE80211PHY PLCPHeaderWithoutServiceField_ms="0.004"
+				PLCPPreamble_ms="0.016" PLCPServiceField_bit="16" PLCPTail_bit="6"
+				SymbolDuration_ms="0.004">
+				<MIB802.11abgn SIFS="0.016" aSlotTime="0.009"
+					dot11CurrentChannelNumberRX="6" dot11CurrentChannelNumberTX="6"
+					dot11CurrentTransmitPowerLevel_dBm="20" />
+				<JEAntenna xDirection="0" yDirection="-5" zDirection="1.6"
+					angle_degrees="30" gain_dBi="50" />
+			</JE80211PHY>
+
+		</JE80211MAC>
+
+	</JE802Station>
+
+
+	<JE802Station address="2">
+		...
+	</JE802Station>
+
+
+	<JE802Station address="3">
+		...
+	</JE802Station>
+
+
+	<JE802Station address="4">
+		...
+	</JE802Station>
+
+	<JEWirelessChannels theReuseDistance_m="200"
+		useInterference="false" orthogonalChannelDistance="1"
+		channelBusyThreshold_dBm="-82" noiseLevel_dBm="-95">
+		<aChannel aChannelNumber="1" dot11FreqBandWidth_MHz="22.0"
+			dot11CenterFreq_MHz="2412" dot11MaximumTransmitPowerLevel_dBm="20.0" />
+		<aChannel aChannelNumber="6" dot11FreqBandWidth_MHz="22.0"
+			dot11CenterFreq_MHz="2437" dot11MaximumTransmitPowerLevel_dBm="20.0" />
+		<aChannel aChannelNumber="11" dot11FreqBandWidth_MHz="22.0"
+			dot11CenterFreq_MHz="2462" dot11MaximumTransmitPowerLevel_dBm="20.0" />
+	</JEWirelessChannels>
+	<JE802PhyModes>
+		<aPhyMode Mbps="06" Name="MCS0" basic="true"  bit_per_symbol="24" id="1" />
+		<aPhyMode Mbps="09" Name="MCS1" basic="false" bit_per_symbol="36" id="2" />
+		<aPhyMode Mbps="12" Name="MCS2" basic="true"  bit_per_symbol="48" id="3" />
+		<aPhyMode Mbps="18" Name="MCS3" basic="false" bit_per_symbol="72" id="4" />
+		<aPhyMode Mbps="24" Name="MCS4" basic="true"  bit_per_symbol="96" id="5" />
+		<aPhyMode Mbps="36" Name="MCS5" basic="false" bit_per_symbol="144" id="6" />
+		<aPhyMode Mbps="48" Name="MCS6" basic="false" bit_per_symbol="192" id="7" />
+		<aPhyMode Mbps="54" Name="MCS7" basic="false" bit_per_symbol="216" id="8" />
+		<aPhyMode Mbps="65" Name="MCS8" basic="false" bit_per_symbol="192" id="7" />
+		<aPhyMode Mbps="78" Name="MCS9" basic="false" bit_per_symbol="216" id="8" />
+	</JE802PhyModes>
+</JE802>
+
