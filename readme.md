@@ -9,6 +9,7 @@ It is not a general network simulator as NS2, instead it concentrates on Wi-Fi. 
 There is no intention to simulate real physics, it uses heuristics to simulate physical phenomenas like noise, multipath or interferences, however this makes sense as real environments are not precisely simulated, in order to keep the user happy with a simple User Interface. Hence the compromise makes sense.
 
 It derives from Jemula and Jemula802.11 which you can find at: https://github.com/schmist
+
 However Jemula802.11 (not Jemula) has been heavily modified to make it much more modular, like for example having several PHY or several MAC protocols in the same simulation. 
 
 If not enough has been done as I would like about MIMO, interferences, noise levels, coding schemes and modulations, there are much improvements here IMO that are unseen together in other simulators. 
