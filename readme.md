@@ -19,7 +19,7 @@ Much more must be done also in terms of usability.
 
 I started this work in 2012 while in 802.11 working group, but there was a three years gap during which I was busy doing open innovation in biology. 
 Recently the first draft for 802.11ax appeared and I thought it was a good idea to revise a bit this little Java program.
-Nowadays my history with 802.11 seems far in the past, I am nowadays in bioinformatics, but I learned a lot with those smart minds at IEEE.
+My history with 802.11 seems far in the past, I am nowadays in bioinformatics, but I learned a lot with those smart minds at IEEE.
 You can check my new works over there: https://github.com/Hjertesvikt/
 
 You can contact me at: https://www.padiracinnovation.org/sites/contact_page.html
